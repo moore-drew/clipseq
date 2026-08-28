@@ -699,13 +699,17 @@ if (params.deduplicate) {
         tuple val(name), path("${name}.dedup.bam"), path("${name}.dedup.bam.bai") into ch_dedup, ch_dedup_pureclip, ch_dedup_rseqc
         path "*.log" into ch_dedup_mqc, ch_dedup_qc
 
+
+        /*
+         *   --extract-umi-method=tag \\
+         *   --umi-tag=UR \\
+         *   --cell-tag=CB \\
+         */
+
         script:
         """
         umi_tools \\
             dedup \\
-            --extract-umi-method=tag \
-            --umi-tag=UR \
-            --cell-tag=CB \
             --umi-separator="$params.umi_separator" \\
             -I $bam \\
             -S ${name}.dedup.bam \\
