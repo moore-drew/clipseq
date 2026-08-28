@@ -704,9 +704,6 @@ if (params.deduplicate) {
         umi_tools \\
             dedup \\
             --umi-separator="$params.umi_separator" \\
-            --extract-umi-method=tag \\
-            --umi-tag=UR \\
-            --cell-tag=CB \\
             -I $bam \\
             -S ${name}.dedup.bam \\
             --output-stats=${name} \\
