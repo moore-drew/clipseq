@@ -703,6 +703,9 @@ if (params.deduplicate) {
         """
         umi_tools \\
             dedup \\
+            --extract-umi-method=tag \
+            --umi-tag=UR \
+            --cell-tag=CB \
             --umi-separator="$params.umi_separator" \\
             -I $bam \\
             -S ${name}.dedup.bam \\
