@@ -76,6 +76,7 @@ mapping_df.loc[:, ['exp', 'smrna_reads', 'genome_reads', 'unmapped_reads']].to_c
 # Deduplication
 # ==========
 
+'''
 dedup_logs = sorted(['dedup/' + f for f in os.listdir('dedup') if f.endswith('.log')])
 dedup = dict((key, []) for key in ['exp', 'input_reads', 'output_reads', 'mean_umis', 'ratio'])
 
@@ -109,6 +110,7 @@ dedup_df.to_csv('dedup_metrics.tsv', sep = '\t', index = False)
 dedup_df.loc[:, ['exp', 'input_reads', 'output_reads']].to_csv('dedup_reads.tsv', sep = '\t', index = False)
 dedup_df.loc[:, ['exp', 'mean_umis']].to_csv('dedup_mean_umis.tsv', sep = '\t', index = False)
 dedup_df.loc[:, ['exp', 'ratio']].to_csv('dedup_ratio.tsv', sep = '\t', index = False)
+'''
 
 # ==========
 # Crosslinks
