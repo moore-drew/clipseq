@@ -1067,7 +1067,7 @@ process clipqc {
     input:
     file ('premap/*') from ch_premap_qc.collect().ifEmpty([])
     file ('mapped/*') from ch_align_qc.collect().ifEmpty([])
-    #file ('dedup/*') from ch_dedup_qc.collect().ifEmpty([])
+    //file ('dedup/*') from ch_dedup_qc.collect().ifEmpty([])
     file ('xlinks/*') from ch_xlinks_qc.collect().ifEmpty([])
     path ('icount/*') from ch_icount_qc.collect().ifEmpty([])
     file ('paraclu/*') from ch_paraclu_qc.collect().ifEmpty([])
